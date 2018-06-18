@@ -1,0 +1,1560 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default">
+		<!-- LE NHAT TUNG -->
+		<!-- Dang nhap -->
+		<action name="dangNhap" class="eCore.controller.Controller_XacThuc"
+			method="dangNhap">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/login.jsp</result>
+		</action>
+		<!-- Dang nhap -->
+		<action name="dangXuat" class="eCore.controller.Controller_XacThuc"
+			method="dangXuat">
+			<result name="SUCCESS">/login.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Xử lý lớp -->
+		<!-- Tìm kiếm lớp -->
+		<action name="timKiemLop" class="eCore.controller.Controller_Lop"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại lớp -->
+		<action name="taiLaiLop" class="eCore.controller.Controller_Lop"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới lớp -->
+		<action name="themMoiLop" class="eCore.controller.Controller_Lop"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu lớp -->
+		<action name="luuDuLieuLop" class="eCore.controller.Controller_Lop"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet -->
+		<action name="xemChiTietLop" class="eCore.controller.Controller_Lop"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua -->
+		<action name="xemChiTietVaChinhSuaLop" class="eCore.controller.Controller_Lop"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa Lop -->
+		<action name="deleteLop" class="eCore.controller.Controller_Lop"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Ho Van Bi - 1/6/2018 -->
+		<!-- xuat excel Lop -->
+		<action name="exportLop" class="eCore.controller.Controller_Lop"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý lớp -->
+
+		<!-- Xử lý năm học -->
+		<!-- Tìm kiếm năm học -->
+		<action name="timKiemNamHoc" class="eCore.controller.Controller_NamHoc"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại năm học -->
+		<action name="taiLaiNamHoc" class="eCore.controller.Controller_NamHoc"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới năm học -->
+		<action name="themMoiNamHoc" class="eCore.controller.Controller_NamHoc"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu năm học -->
+		<action name="luuDuLieuNamHoc" class="eCore.controller.Controller_NamHoc"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet -->
+		<action name="xemChiTietNamHoc" class="eCore.controller.Controller_NamHoc"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua -->
+		<action name="xemChiTietVaChinhSuaNamHoc" class="eCore.controller.Controller_NamHoc"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa năm học -->
+		<action name="deleteNamHoc" class="eCore.controller.Controller_NamHoc"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý năm học -->
+
+		<!-- Xử lý học kỳ -->
+		<!-- Tìm kiếm học kỳ -->
+		<action name="timKiemHocKy" class="eCore.controller.Controller_HocKy"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại học kỳ -->
+		<action name="taiLaiHocKy" class="eCore.controller.Controller_HocKy"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới học kỳ -->
+		<action name="themMoiHocKy" class="eCore.controller.Controller_HocKy"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu học kỳ -->
+		<action name="luuDuLieuHocKy" class="eCore.controller.Controller_HocKy"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet -->
+		<action name="xemChiTietHocKy" class="eCore.controller.Controller_HocKy"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua -->
+		<action name="xemChiTietVaChinhSuaHocKy" class="eCore.controller.Controller_HocKy"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa học kỳ -->
+		<action name="deleteHocKy" class="eCore.controller.Controller_HocKy"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý học kỳ -->
+
+		<!-- Xử lý đơn vị -->
+		<!-- Tìm kiếm đơn vị -->
+		<action name="timKiemDonVi" class="eCore.controller.Controller_DonVi"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại đơn vị -->
+		<action name="taiLaiDonVi" class="eCore.controller.Controller_DonVi"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới đơn vị -->
+		<action name="themMoiDonVi" class="eCore.controller.Controller_DonVi"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu đơn vị -->
+		<action name="luuDuLieuDonVi" class="eCore.controller.Controller_DonVi"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet -->
+		<action name="xemChiTietDonVi" class="eCore.controller.Controller_DonVi"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua -->
+		<action name="xemChiTietVaChinhSuaDonVi" class="eCore.controller.Controller_DonVi"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa đơn vị -->
+		<action name="deleteDonVi" class="eCore.controller.Controller_DonVi"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Ho Van Bi - 5/6/2018 -->
+		<!-- import đơn vị -->
+		<action name="importDonVi" class="eCore.controller.Controller_DonVi"
+			method="importData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý đơn vị -->
+
+		<!-- Xử lý chức năng -->
+		<!-- Tìm kiếm chức năng -->
+		<action name="timKiemChucNang" class="eCore.controller.Controller_ChucNang"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại chức năng -->
+		<action name="taiLaiChucNang" class="eCore.controller.Controller_ChucNang"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới chức năng -->
+		<action name="themMoiChucNang" class="eCore.controller.Controller_ChucNang"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu chức năng -->
+		<action name="luuDuLieuChucNang" class="eCore.controller.Controller_ChucNang"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet -->
+		<action name="xemChiTietChucNang" class="eCore.controller.Controller_ChucNang"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua -->
+		<action name="xemChiTietVaChinhSuaChucNang" class="eCore.controller.Controller_ChucNang"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa chức năng -->
+		<action name="deleteChucNang" class="eCore.controller.Controller_ChucNang"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý chức năng -->
+
+		<!-- Xử lý nhóm phân quyền -->
+		<!-- Tìm kiếm nhóm phân quyền -->
+		<action name="timKiemNhomPhanQuyen" class="eCore.controller.Controller_NhomPhanQuyen"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại nhóm phân quyền -->
+		<action name="taiLaiNhomPhanQuyen" class="eCore.controller.Controller_NhomPhanQuyen"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới nhóm phân quyền -->
+		<action name="themMoiNhomPhanQuyen" class="eCore.controller.Controller_NhomPhanQuyen"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu nhóm phân quyền -->
+		<action name="luuDuLieuNhomPhanQuyen" class="eCore.controller.Controller_NhomPhanQuyen"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet -->
+		<action name="xemChiTietNhomPhanQuyen" class="eCore.controller.Controller_NhomPhanQuyen"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua -->
+		<action name="xemChiTietVaChinhSuaNhomPhanQuyen" class="eCore.controller.Controller_NhomPhanQuyen"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa nhóm phân quyền -->
+		<action name="deleteNhomPhanQuyen" class="eCore.controller.Controller_NhomPhanQuyen"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý nhóm phân quyền -->
+
+		<!-- Xử lý nhân viên -->
+		<!-- Tìm kiếm nhân viên -->
+		<action name="timKiemNhanVien" class="eCore.controller.Controller_NhanVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại nhân viên -->
+		<action name="taiLaiNhanVien" class="eCore.controller.Controller_NhanVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới NhanVien -->
+		<action name="themMoiNhanVien" class="eCore.controller.Controller_NhanVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu NhanVien -->
+		<action name="luuDuLieuNhanVien" class="eCore.controller.Controller_NhanVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet -->
+		<action name="xemChiTietNhanVien" class="eCore.controller.Controller_NhanVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua -->
+		<action name="xemChiTietVaChinhSuaNhanVien" class="eCore.controller.Controller_NhanVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa NhanVien -->
+		<action name="deleteNhanVien" class="eCore.controller.Controller_NhanVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý NhanVien -->
+
+		<!-- Xử lý sinh viên -->
+		<!-- Tìm kiếm sinh viên -->
+		<action name="timKiemSinhVien" class="eCore.controller.Controller_SinhVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại đơn vị -->
+		<action name="taiLaiSinhVien" class="eCore.controller.Controller_SinhVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới sinh viên -->
+		<action name="themMoiSinhVien" class="eCore.controller.Controller_SinhVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu học kỳ -->
+		<action name="luuDuLieuSinhVien" class="eCore.controller.Controller_SinhVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet -->
+		<action name="xemChiTietSinhVien" class="eCore.controller.Controller_SinhVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua -->
+		<action name="xemChiTietVaChinhSuaSinhVien" class="eCore.controller.Controller_SinhVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<action name="deleteSinhVien" class="eCore.controller.Controller_SinhVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Hồ Văn Bi - 2/6/2018 -->
+		<action name="exportSinhVien" class="eCore.controller.Controller_SinhVien"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- ket thuc xu ly sinh vien -->
+
+		<!-- Xử lý TaiKhoanNhanVien -->
+		<!-- Tìm kiếm TaiKhoanNhanVien -->
+		<action name="timKiemTaiKhoanNhanVien" class="eCore.controller.Controller_TaiKhoanNhanVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại TaiKhoanNhanVien -->
+		<action name="taiLaiTaiKhoanNhanVien" class="eCore.controller.Controller_TaiKhoanNhanVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới TaiKhoanNhanVien -->
+		<action name="themMoiTaiKhoanNhanVien" class="eCore.controller.Controller_TaiKhoanNhanVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưu TaiKhoanNhanVien -->
+		<action name="luuDuLieuTaiKhoanNhanVien" class="eCore.controller.Controller_TaiKhoanNhanVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết TaiKhoanNhanVien -->
+		<action name="xemChiTietTaiKhoanNhanVien" class="eCore.controller.Controller_TaiKhoanNhanVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua TaiKhoanNhanVien -->
+		<action name="xemChiTietVaChinhSuaTaiKhoanNhanVien" class="eCore.controller.Controller_TaiKhoanNhanVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa TaiKhoanNhanVien -->
+		<action name="deleteTaiKhoanNhanVien" class="eCore.controller.Controller_TaiKhoanNhanVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Hồ Văn Bi - 27/5/2018 -->
+		<!-- Đổi mật khẩu -->
+		<action name="doiMatKhauTaiKhoanNhanVien" class="eCore.controller.Controller_TaiKhoanNhanVien"
+			method="doiMatKhau">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- kết thúc xử lý TaiKhoanNhanVien -->
+
+		<!-- Xử lý TaiKhoanSinhVien -->
+		<!-- Tìm kiếm TaiKhoanSinhVien -->
+		<action name="timKiemTaiKhoanSinhVien" class="eCore.controller.Controller_TaiKhoanSinhVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại TaiKhoanSinhVien -->
+		<action name="taiLaiTaiKhoanSinhVien" class="eCore.controller.Controller_TaiKhoanSinhVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới TaiKhoanSinhVien -->
+		<action name="themMoiTaiKhoanSinhVien" class="eCore.controller.Controller_TaiKhoanSinhVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưu TaiKhoanSinhVien -->
+		<action name="luuDuLieuTaiKhoanSinhVien" class="eCore.controller.Controller_TaiKhoanSinhVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết TaiKhoanSinhVien -->
+		<action name="xemChiTietTaiKhoanSinhVien" class="eCore.controller.Controller_TaiKhoanSinhVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua TaiKhoanSinhVien -->
+		<action name="xemChiTietVaChinhSuaTaiKhoanSinhVien" class="eCore.controller.Controller_TaiKhoanSinhVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa TaiKhoanSinhVien -->
+		<action name="deleteTaiKhoanSinhVien" class="eCore.controller.Controller_TaiKhoanSinhVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Hồ Văn Bi - 27/5/2018 -->
+		<!-- Đổi mật khẩu -->
+		<action name="doiMatKhauTaiKhoanSinhVien" class="eCore.controller.Controller_TaiKhoanSinhVien"
+			method="doiMatKhau">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý TaiKhoanSinhVien -->
+
+
+
+
+		<!-- HO VAN BI -->
+		<!-- Quan ly eSm3 -->
+		<!-- Xử lý cơ sở khám chữa bệnh -->
+		<!-- Tìm kiếm cơ sở khám chữa bệnh -->
+		<action name="timKiemCoSoKhamChuaBenh" class="eSm3.controller.Controller_CoSoKhamChuaBenh"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại cơ sở khám chữa bệnh -->
+		<action name="taiLaiCoSoKhamChuaBenh" class="eSm3.controller.Controller_CoSoKhamChuaBenh"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới cơ sở khám chữa bệnh -->
+		<action name="themMoiCoSoKhamChuaBenh" class="eSm3.controller.Controller_CoSoKhamChuaBenh"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưu cơ sở khám chữa bệnh -->
+		<action name="luuDuLieuCoSoKhamChuaBenh" class="eSm3.controller.Controller_CoSoKhamChuaBenh"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết cơ sở khám chữa bệnh -->
+		<action name="xemChiTietCoSoKhamChuaBenh" class="eSm3.controller.Controller_CoSoKhamChuaBenh"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua cơ sở khám chữa bệnh -->
+		<action name="xemChiTietVaChinhSuaCoSoKhamChuaBenh" class="eSm3.controller.Controller_CoSoKhamChuaBenh"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa cơ sở khám chữa bệnh -->
+		<action name="deleteCoSoKhamChuaBenh" class="eSm3.controller.Controller_CoSoKhamChuaBenh"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa toàn bộ cơ sở khám chữa bệnh -->
+		<action name="deleteAllCoSoKhamChuaBenh" class="eSm3.controller.Controller_CoSoKhamChuaBenh"
+			method="deleteAll">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- import cơ sở khám chữa bệnh -->
+		<action name="importCoSoKhamChuaBenh" class="eSm3.controller.Controller_CoSoKhamChuaBenh"
+			method="importData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý cơ sở khám chữa bệnh -->
+
+		<!-- Xử lý đợt đăng ký bảo hiểm y tế -->
+		<!-- Tìm kiếm đợt đăng ký bảo hiểm y tế -->
+		<action name="timKiemDotDangKyBaoHiemYTe" class="eSm3.controller.Controller_DotDangKyBaoHiemYTe"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại đợt đăng ký bảo hiểm y tế -->
+		<action name="taiLaiDotDangKyBaoHiemYTe" class="eSm3.controller.Controller_DotDangKyBaoHiemYTe"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới đợt đăng ký bảo hiểm y tế -->
+		<action name="themMoiDotDangKyBaoHiemYTe" class="eSm3.controller.Controller_DotDangKyBaoHiemYTe"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưu đợt đăng ký bảo hiểm y tế -->
+		<action name="luuDuLieuDotDangKyBaoHiemYTe" class="eSm3.controller.Controller_DotDangKyBaoHiemYTe"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết đợt đăng ký bảo hiểm y tế -->
+		<action name="xemChiTietDotDangKyBaoHiemYTe" class="eSm3.controller.Controller_DotDangKyBaoHiemYTe"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua đợt đăng ký bảo hiểm y tế -->
+		<action name="xemChiTietVaChinhSuaDotDangKyBaoHiemYTe" class="eSm3.controller.Controller_DotDangKyBaoHiemYTe"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa đợt đăng ký bảo hiểm y tế -->
+		<action name="deleteDotDangKyBaoHiemYTe" class="eSm3.controller.Controller_DotDangKyBaoHiemYTe"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý đợt đăng ký bảo hiểm y tế -->
+
+		<!-- Xử lý đợt đăng ký bảo hiểm tự nguyện -->
+		<!-- Tìm kiếm đợt đăng ký bảo hiểm tự nguyện -->
+		<action name="timKiemDotDangKyBaoHiemTuNguyen"
+			class="eSm3.controller.Controller_DotDangKyBaoHiemTuNguyen" method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại đợt đăng ký bảo hiểm tự nguyện -->
+		<action name="taiLaiDotDangKyBaoHiemTuNguyen"
+			class="eSm3.controller.Controller_DotDangKyBaoHiemTuNguyen" method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới đợt đăng ký bảo hiểm tự nguyện -->
+		<action name="themMoiDotDangKyBaoHiemTuNguyen"
+			class="eSm3.controller.Controller_DotDangKyBaoHiemTuNguyen" method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưu đợt đăng ký bảo hiểm tự nguyện -->
+		<action name="luuDuLieuDotDangKyBaoHiemTuNguyen"
+			class="eSm3.controller.Controller_DotDangKyBaoHiemTuNguyen" method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết đợt đăng ký bảo hiểm tự nguyện -->
+		<action name="xemChiTietDotDangKyBaoHiemTuNguyen"
+			class="eSm3.controller.Controller_DotDangKyBaoHiemTuNguyen" method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua đợt đăng ký bảo hiểm tự nguyện -->
+		<action name="xemChiTietVaChinhSuaDotDangKyBaoHiemTuNguyen"
+			class="eSm3.controller.Controller_DotDangKyBaoHiemTuNguyen" method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa đợt đăng ký bảo hiểm tự nguyện -->
+		<action name="deleteDotDangKyBaoHiemTuNguyen"
+			class="eSm3.controller.Controller_DotDangKyBaoHiemTuNguyen" method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý đợt đăng ký bảo hiểm tự nguyện -->
+
+
+		<!-- Xử lý kê khai minh chứng bảo hiểm nhân viên -->
+		<!-- Tìm kiếm kê khai minh chứng bảo hiểm nhân viên -->
+		<action name="timKiemKeKhaiMinhChungBaoHiemNhanVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemNhanVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại kê khai minh chứng bảo hiểm nhân viên -->
+		<action name="taiLaiKeKhaiMinhChungBaoHiemNhanVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemNhanVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới kê khai minh chứng bảo hiểm nhân viên -->
+		<action name="themMoiKeKhaiMinhChungBaoHiemNhanVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemNhanVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưukê khai minh chứng bảo hiểm nhân viên -->
+		<action name="luuDuLieuKeKhaiMinhChungBaoHiemNhanVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemNhanVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết kê khai minh chứng bảo hiểm nhân viên -->
+		<action name="xemChiTietKeKhaiMinhChungBaoHiemNhanVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemNhanVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua kê khai minh chứng bảo hiểm nhân viên -->
+		<action name="xemChiTietVaChinhSuaKeKhaiMinhChungBaoHiemNhanVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemNhanVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa kê khai minh chứng bảo hiểm nhân viên -->
+		<action name="deleteKeKhaiMinhChungBaoHiemNhanVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemNhanVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		
+		<!-- export kê khai minh chứng bảo hiểm nhân viên -->
+		<action name="exportKeKhaiMinhChungBaoHiemNhanVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemNhanVien"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		
+		
+		<!-- kết thúc xử lý kê khai minh chứng bảo hiểm nhân viên -->
+
+		<!-- Xử lý kê khai minh chứng bảo hiểm sinh viên -->
+		<!-- Tìm kiếm kê khai minh chứng bảo hiểm sinh viên -->
+		<action name="timKiemKeKhaiMinhChungBaoHiemSinhVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemSinhVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại kê khai minh chứng bảo hiểm sinh viên -->
+		<action name="taiLaiKeKhaiMinhChungBaoHiemSinhVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemSinhVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới kê khai minh chứng bảo hiểm sinh viên -->
+		<action name="themMoiKeKhaiMinhChungBaoHiemSinhVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemSinhVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưukê khai minh chứng bảo hiểm sinh viên -->
+		<action name="luuDuLieuKeKhaiMinhChungBaoHiemSinhVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemSinhVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết kê khai minh chứng bảo hiểm sinh viên -->
+		<action name="xemChiTietKeKhaiMinhChungBaoHiemSinhVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemSinhVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua kê khai minh chứng bảo hiểm sinh viên -->
+		<action name="xemChiTietVaChinhSuaKeKhaiMinhChungBaoHiemSinhVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemSinhVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa kê khai minh chứng bảo hiểm sinh viên -->
+		<action name="deleteKeKhaiMinhChungBaoHiemSinhVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemSinhVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		
+		<!-- export kê khai minh chứng bảo hiểm sinh viên -->
+		<action name="exportKeKhaiMinhChungBaoHiemSinhVien"
+			class="eSm3.controller.Controller_KeKhaiMinhChungBaoHiemSinhVien"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		
+		<!-- kết thúc xử lý kê khai minh chứng bảo hiểm sinh viên -->
+
+
+		<!-- Xử lý thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<!-- Tìm kiếm thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<action name="timKiemThongTinDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<action name="taiLaiThongTinDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<action name="themMoiThongTinDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưuthông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<action name="luuDuLieuThongTinDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<action name="xemChiTietThongTinDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua thông tin đăng ký bảo hiểm tự nguyện nhân 
+			viên -->
+		<action name="xemChiTietVaChinhSuaThongTinDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<action name="deleteThongTinDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- xuất excel thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<action name="exportThongTinDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+
+		<!-- Xử lý thông tin đăng ký bảo hiểm tự nguyện nhân viên _ quản lý -->
+		<!-- Tìm kiếm thông tin đăng ký bảo hiểm tự nguyện nhân viên _ quản lý -->
+		<action name="timKiemThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại thông tin đăng ký bảo hiểm tự nguyện nhân viên _ quản lý -->
+		<action name="taiLaiThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới thông tin đăng ký bảo hiểm tự nguyện nhân viên _ quản lý -->
+		<action name="themMoiThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưuthông tin đăng ký bảo hiểm tự nguyện nhân viên _ quản lý -->
+		<action name="luuDuLieuThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết thông tin đăng ký bảo hiểm tự nguyện nhân viên _ quản 
+			lý -->
+		<action name="xemChiTietThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua thông tin đăng ký bảo hiểm tự nguyện nhân 
+			viên -->
+		<action
+			name="xemChiTietVaChinhSuaThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa thông tin đăng ký bảo hiểm tự nguyện nhân viên _ quản lý -->
+		<action name="deleteThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- duyệt thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<action name="duyetDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="duyetDangKyBHTN">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- hủy duyệt thông tin đăng ký bảo hiểm tự nguyện nhân viên -->
+		<action name="huyDuyetDangKyBaoHiemTuNguyenNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenNhanVien_quanly"
+			method="huyDuyetDangKyBHTN">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý thông tin đăng ký bảo hiểm tự nguyện nhân viên _ quản 
+			lý -->
+
+		<!-- Xử lý thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<!-- Tìm kiếm thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<action name="timKiemThongTinDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<action name="taiLaiThongTinDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<action name="themMoiThongTinDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưuthông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<action name="luuDuLieuThongTinDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<action name="xemChiTietThongTinDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua thông tin đăng ký bảo hiểm tự nguyện sinh 
+			viên -->
+		<action name="xemChiTietVaChinhSuaThongTinDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<action name="deleteThongTinDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- xuất excel thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<action name="exportThongTinDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- duyệt thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<action name="duyetDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="duyetDangKyBHTN">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- hủy duyệt thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+		<action name="huyDuyetDangKyBaoHiemTuNguyenSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemTuNguyenSinhVien"
+			method="huyDuyetDangKyBHTN">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý thông tin đăng ký bảo hiểm tự nguyện sinh viên -->
+
+
+		<!-- Xử lý thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<!-- Tìm kiếm thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="timKiemThongTinDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="taiLaiThongTinDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="themMoiThongTinDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưuthông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="luuDuLieuThongTinDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="xemChiTietThongTinDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="xemChiTietVaChinhSuaThongTinDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="deleteThongTinDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- xuất excel thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="exportThongTinDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- duyệt thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="duyetDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="duyetDangKyBHYT">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- hủy duyệt thông tin đăng ký bảo hiểm y tế sinh viên -->
+		<action name="huyDuyetDangKyBaoHiemYTeSinhVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeSinhVien"
+			method="huyDuyetDangKyBHYT">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý thông tin đăng ký bảo hiểm y tế sinh viên -->
+
+		<!-- Xử lý thông tin đăng ký bảo hiểm y tế nhân viên -->
+		<!-- Tìm kiếm thông tin đăng ký bảo hiểm y tế nhân viên -->
+		<action name="timKiemThongTinDangKyBaoHiemYTeNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại thông tin đăng ký bảo hiểm y tế nhân viên -->
+		<action name="taiLaiThongTinDangKyBaoHiemYTeNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới thông tin đăng ký bảo hiểm y tế nhân viên -->
+		<action name="themMoiThongTinDangKyBaoHiemYTeNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưuthông tin đăng ký bảo hiểm y tế nhân viên -->
+		<action name="luuDuLieuThongTinDangKyBaoHiemYTeNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết thông tin đăng ký bảo hiểm y tế nhân viên -->
+		<action name="xemChiTietThongTinDangKyBaoHiemYTeNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua thông tin đăng ký bảo hiểm y tế nhân viên -->
+		<action name="xemChiTietVaChinhSuaThongTinDangKyBaoHiemYTeNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa thông tin đăng ký bảo hiểm y tế nhân viên -->
+		<action name="deleteThongTinDangKyBaoHiemYTeNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- xuất excel thông tin đăng ký bảo hiểm y tế nhân viên -->
+		<action name="exportThongTinDangKyBaoHiemYTeNhanVien"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý thông tin đăng ký bảo hiểm y tế nhân viên -->
+
+
+		<!-- quản lý thông tin đăng ký bảo hiểm y tế nhân viên _ quản lý -->
+		<!-- Tìm kiếm thông tin đăng ký bảo hiểm y tế nhân viên _ quản lý -->
+		<action name="timKiemThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại thông tin đăng ký bảo hiểm y tế nhân viên _ quản lý -->
+		<action name="taiLaiThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới thông tin đăng ký bảo hiểm y tế nhân viên _ quản lý -->
+		<action name="themMoiThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- Lưuthông tin đăng ký bảo hiểm y tế nhân viên _ quản lý -->
+		<action name="luuDuLieuThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết thông tin đăng ký bảo hiểm y tế nhân viên _ quản lý -->
+		<action name="xemChiTietThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua thông tin đăng ký bảo hiểm y tế nhân viên 
+			_ quản lý -->
+		<action name="xemChiTietVaChinhSuaThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa thông tin đăng ký bảo hiểm y tế nhân viên _ quản lý -->
+		<action name="deleteThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- duyệt thông tin đăng ký bảo hiểm y tế nhân viên _ quản lý -->
+		<action name="duyetDangKyBaoHiemYTeNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="duyetDangKyBHYT">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- hủy duyệt thông tin đăng ký bảo hiểm y tế nhân viên _ quản lý -->
+		<action name="huyDuyetDangKyBaoHiemYTeNhanVien_quanly"
+			class="eSm3.controller.Controller_ThongTinDangKyBaoHiemYTeNhanVien_quanly"
+			method="huyDuyetDangKyBHYT">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc quản lý thông tin đăng ký bảo hiểm y tế nhân viên _ quản 
+			lý -->
+
+
+		<!-- Quan ly eSm4 -->
+		<!-- Xử lý đợt kê khai thông tin ngoại trú -->
+		<!-- Tìm kiếm đợt kê khai thông tin ngoại trú -->
+		<action name="timKiemDotKeKhaiThongTinNgoaiTru"
+			class="eSm4.controller.Controller_DotKeKhaiThongTinNgoaiTru" method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại đợt kê khai thông tin ngoại trú -->
+		<action name="taiLaiDotKeKhaiThongTinNgoaiTru"
+			class="eSm4.controller.Controller_DotKeKhaiThongTinNgoaiTru" method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới đợt kê khai thông tin ngoại trú -->
+		<action name="themMoiDotKeKhaiThongTinNgoaiTru"
+			class="eSm4.controller.Controller_DotKeKhaiThongTinNgoaiTru" method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu đợt kê khai thông tin ngoại trú -->
+		<action name="luuDuLieuDotKeKhaiThongTinNgoaiTru"
+			class="eSm4.controller.Controller_DotKeKhaiThongTinNgoaiTru" method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết đợt kê khai thông tin ngoại trú -->
+		<action name="xemChiTietDotKeKhaiThongTinNgoaiTru"
+			class="eSm4.controller.Controller_DotKeKhaiThongTinNgoaiTru" method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua đợt kê khai thông tin ngoại trú -->
+		<action name="xemChiTietVaChinhSuaDotKeKhaiThongTinNgoaiTru"
+			class="eSm4.controller.Controller_DotKeKhaiThongTinNgoaiTru" method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa đợt kê khai thông tin ngoại trú -->
+		<action name="deleteDotKeKhaiThongTinNgoaiTru"
+			class="eSm4.controller.Controller_DotKeKhaiThongTinNgoaiTru" method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý đợt kê khai thông tin ngoại trú -->
+
+
+		<!-- Xử lý thông tin ngoại trú -->
+		<!-- Tìm kiếm thông tin ngoại trú -->
+		<action name="timKiemThongTinNgoaiTru" class="eSm4.controller.Controller_ThongTinNgoaiTru"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại thông tin ngoại trú -->
+		<action name="taiLaiThongTinNgoaiTru" class="eSm4.controller.Controller_ThongTinNgoaiTru"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới thông tin ngoại trú -->
+		<action name="themMoiThongTinNgoaiTru" class="eSm4.controller.Controller_ThongTinNgoaiTru"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu thông tin ngoại trú -->
+		<action name="luuDuLieuThongTinNgoaiTru" class="eSm4.controller.Controller_ThongTinNgoaiTru"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết thông tin ngoại trú -->
+		<action name="xemChiTietThongTinNgoaiTru" class="eSm4.controller.Controller_ThongTinNgoaiTru"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua thông tin ngoại trú -->
+		<action name="xemChiTietVaChinhSuaThongTinNgoaiTru" class="eSm4.controller.Controller_ThongTinNgoaiTru"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa thông tin ngoại trú -->
+		<action name="deleteThongTinNgoaiTru" class="eSm4.controller.Controller_ThongTinNgoaiTru"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- export thông tin ngoại trú -->
+		<action name="exportThongTinNgoaiTru" class="eSm4.controller.Controller_ThongTinNgoaiTru"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- kết thúc xử lý thông tin ngoại trú -->
+
+
+
+
+
+		<!-- Quan ly eSm5 -->
+		<!-- Xử lý thông tin khen thưởng -->
+		<!-- Tìm kiếm thông tin khen thưởng -->
+		<action name="timKiemThongTinKhenThuong" class="eSm5.controller.Controller_ThongTinKhenThuong"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại thông tin khen thưởng -->
+		<action name="taiLaiThongTinKhenThuong" class="eSm5.controller.Controller_ThongTinKhenThuong"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới thông tin khen thưởng -->
+		<action name="themMoiThongTinKhenThuong" class="eSm5.controller.Controller_ThongTinKhenThuong"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu thông tin khen thưởng -->
+		<action name="luuDuLieuThongTinKhenThuong" class="eSm5.controller.Controller_ThongTinKhenThuong"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết thông tin khen thưởng -->
+		<action name="xemChiTietThongTinKhenThuong" class="eSm5.controller.Controller_ThongTinKhenThuong"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua thông tin khen thưởng -->
+		<action name="xemChiTietVaChinhSuaThongTinKhenThuong" class="eSm5.controller.Controller_ThongTinKhenThuong"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa thông tin khen thưởng -->
+		<action name="deleteThongTinKhenThuong" class="eSm5.controller.Controller_ThongTinKhenThuong"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- xuat excel thông tin khen thưởng -->
+		<action name="exportThongTinKhenThuong" class="eSm5.controller.Controller_ThongTinKhenThuong"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý thông tin khen thưởng -->
+
+
+		<!-- Xử lý thông tin kỷ luật -->
+		<!-- Tìm kiếm thông tin kỷ luật -->
+		<action name="timKiemThongTinKyLuat" class="eSm5.controller.Controller_ThongTinKyLuat"
+			method="search">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Tải lại thông tin kỷ luật -->
+		<action name="taiLaiThongTinKyLuat" class="eSm5.controller.Controller_ThongTinKyLuat"
+			method="refresh">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Thêm mới thông tin kỷ luật -->
+		<action name="themMoiThongTinKyLuat" class="eSm5.controller.Controller_ThongTinKyLuat"
+			method="addNew">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Lưu thông tin kỷ luật -->
+		<action name="luuDuLieuThongTinKyLuat" class="eSm5.controller.Controller_ThongTinKyLuat"
+			method="saveOrUpdate">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiết thông tin kỷ luật -->
+		<action name="xemChiTietThongTinKyLuat" class="eSm5.controller.Controller_ThongTinKyLuat"
+			method="viewDetail">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xem chi tiet va chinh sua thông tin kỷ luật -->
+		<action name="xemChiTietVaChinhSuaThongTinKyLuat" class="eSm5.controller.Controller_ThongTinKyLuat"
+			method="viewDetailAndEdit">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- Xoa đợt kê khai thông tin kỷ luật -->
+		<action name="deleteThongTinKyLuat" class="eSm5.controller.Controller_ThongTinKyLuat"
+			method="delete">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+
+		<!-- xuat excel thông tin kỷ luật -->
+		<action name="exportThongTinKyLuat" class="eSm5.controller.Controller_ThongTinKyLuat"
+			method="exportData">
+			<result name="SUCCESS">/index.jsp</result>
+			<result name="FAIL">/index.jsp</result>
+		</action>
+		<!-- kết thúc xử lý thông tin kỷ luật -->
+
+
+
+
+
+
+
+	</package>
+</struts>
